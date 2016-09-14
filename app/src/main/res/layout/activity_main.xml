@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.robertoluishernandeztovar.first_parcial_exam.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number 1:"
+        android:id="@+id/numero1"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/calcular"
+        android:layout_alignStart="@+id/calcular" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number 2:"
+        android:id="@+id/number2"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/numero1"
+        android:layout_alignLeft="@+id/numero1"
+        android:layout_alignStart="@+id/numero1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/n2"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/number2"
+        android:layout_toRightOf="@+id/calcular"
+        android:layout_toEndOf="@+id/calcular" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/n1"
+        android:background="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/comparacion"
+        android:layout_toEndOf="@+id/comparacion" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:id="@+id/calcular"
+        android:layout_marginTop="59dp"
+        android:onClick="calcular"
+        android:layout_below="@+id/number2"
+        android:layout_alignRight="@+id/resta"
+        android:layout_alignEnd="@+id/resta" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mensaje"
+        android:layout_below="@+id/calcular"
+        android:layout_centerHorizontal="true"
+        android:linksClickable="true"
+        android:textColor="#ff0000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparison:            "
+        android:id="@+id/comparacion"
+        android:textSize="20dp"
+        android:layout_below="@+id/mensaje"
+        android:layout_marginTop="48dp"
+        android:layout_toLeftOf="@+id/n2"
+        android:layout_toStartOf="@+id/n2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Addition:"
+        android:id="@+id/suma"
+        android:textSize="20dp"
+        android:layout_below="@+id/comparacion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Substraction:"
+        android:id="@+id/resta"
+        android:textSize="20dp"
+        android:layout_below="@+id/suma"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product:"
+        android:id="@+id/Multiplicacion"
+        android:textSize="20dp"
+        android:layout_below="@+id/resta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytcomparacion"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/comparacion"
+        android:layout_toRightOf="@+id/mensaje"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytsuma"
+        android:layout_above="@+id/resta"
+        android:layout_toRightOf="@+id/mensaje"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/suma"
+        android:layout_alignRight="@+id/n2"
+        android:layout_alignEnd="@+id/n2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytresta"
+        android:layout_alignBottom="@+id/resta"
+        android:layout_toRightOf="@+id/mensaje"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/lytsuma"
+        android:layout_alignEnd="@+id/lytsuma" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytmulti"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/lytresta"
+        android:layout_alignStart="@+id/lytresta"
+        android:layout_alignBottom="@+id/Multiplicacion"
+        android:layout_alignRight="@+id/n1"
+        android:layout_alignEnd="@+id/n1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAN"
+        android:id="@+id/limpiar"
+        android:onClick="limpiar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/suma"
+        android:layout_alignEnd="@+id/suma" />
+
+
+
+</RelativeLayout>
